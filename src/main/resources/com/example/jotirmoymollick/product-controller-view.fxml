@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.jotirmoymollick.ProductControllerView"
+            prefHeight="400.0" prefWidth="600.0">
+    <!-- Main container -->
+    <VBox spacing="10" layoutX="10" layoutY="10" prefWidth="780" prefHeight="580">
+        <!-- Order Form -->
+        <HBox spacing="10">
+            <VBox spacing="5">
+                <Label text="Customer Name:"/>
+                <TextField fx:id="customerNameField" promptText="Enter customer name"/>
+            </VBox>
+            <VBox spacing="5">
+                <Label text="Product Name:"/>
+                <TextField fx:id="productNameField" promptText="Enter product name"/>
+            </VBox>
+            <VBox spacing="5">
+                <Label text="Quantity:"/>
+                <TextField fx:id="quantityField" promptText="Enter quantity"/>
+            </VBox>
+            <VBox spacing="5">
+                <Label text="Price per Unit:"/>
+                <TextField fx:id="priceField" promptText="Enter price per unit"/>
+            </VBox>
+            <VBox spacing="5">
+                <Label text="Order Date:"/>
+                <DatePicker fx:id="orderDatePicker"/>
+            </VBox>
+        </HBox>
+        <Button text="Add Order" fx:id="addOrderButton" maxWidth="200" style="-fx-alignment: center;"/>
+
+        <!-- Order Table -->
+        <TableView fx:id="orderTable" prefHeight="400" prefWidth="780">
+            <columns>
+                <TableColumn text="Order ID" fx:id="orderIdColumn" prefWidth="150"/>
+                <TableColumn text="Customer Name" fx:id="customerNameColumn" prefWidth="150"/>
+                <TableColumn text="Product Name" fx:id="productNameColumn" prefWidth="150"/>
+                <TableColumn text="Quantity" fx:id="quantityColumn" prefWidth="100"/>
+                <TableColumn text="Price per Unit" fx:id="priceColumn" prefWidth="100"/>
+                <TableColumn text="Total Amount" fx:id="totalAmountColumn" prefWidth="120"/>
+                <TableColumn text="Order Date" fx:id="orderDateColumn" prefWidth="150"/>
+                <TableColumn text="Actions" fx:id="actionsColumn" prefWidth="100"/>
+            </columns>
+        </TableView>
+    </VBox>
+</AnchorPane>
